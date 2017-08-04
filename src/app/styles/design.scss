@@ -1,0 +1,38 @@
+@import "./colors";
+
+*, *:before, *:after {
+  box-sizing:border-box;
+}
+
+html, body {
+  font-size:10px;
+}
+
+html, body, option, code, pre, select, input, textarea {
+  font-size:1.2rem;
+  font-family: helvetica;
+}
+
+html {
+  background:$color_alt3;
+  color:$color_text_primary;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight:normal;
+  margin:0;
+  padding:0;
+}
+
+.heading {
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+a, a:link, a:visited, a:active {
+  color:$color_text_primary;
+  text-decoration: none;
+}
+
+a:hover {
+  color:$color_text_hover;
+}

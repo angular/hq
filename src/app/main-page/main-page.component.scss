@@ -1,0 +1,13 @@
+.widgets > .widget {
+  background:rgba(100,100,100,0.05);
+  max-height:30vh;
+  min-height:30vh;
+  border-right:4px dashed rgba(0,0,0,0.1);
+  vertical-align: middle;
+  text-align:center;
+  overflow:hidden;
+
+  &.is-failing {
+    background: rgba(200,0,0,0.1);
+  }
+}

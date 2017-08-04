@@ -1,0 +1,22 @@
+:host {
+  display:block;
+}
+
+.title, .status {
+  display:inline-block;
+}
+
+.status {
+  float:right;
+
+  & > * {
+    width:auto!important;
+    height:auto!important;
+    padding:2px 6px;
+    display:inline-block;
+  }
+
+  & > * + * {
+    margin-left:0.5rem;
+  }
+}

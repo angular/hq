@@ -1,0 +1,36 @@
+.details-container {
+  .details-area {
+    padding:2rem;
+  }
+
+  .details-area + .details-area {
+    border-left:2px dashed black;
+  }
+}
+
+header {
+  margin-bottom:1rem;
+  position:relative;
+
+  .links {
+    position:absolute;
+    top:0;
+    right:0;
+  }
+}
+
+.items-list > * {
+  padding:0.5rem 0;
+  background:transparent;
+  transition:0.2s cubic-bezier(0.35, 0, 0.25, 1) all;
+  cursor: pointer;
+
+  &:hover {
+    background:rgba(0,0,0,0.1);
+    padding-left:15px;
+  }
+}
+
+.items-list > * + * {
+  border-top:1px solid rgba(0,0,0,.1);
+}
