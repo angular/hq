@@ -5,10 +5,15 @@
   "hosting": {
     "public": "dist",
     "rewrites": [
-      {
+
+			{
+				"source": "/api/webhooks/github",
+				"function": "githubWebhook"
+			},
+			{
         "source": "**",
         "destination": "/index.html"
-      }
+			}
     ]
   }
 }

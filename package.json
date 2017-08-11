@@ -8,7 +8,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:functions": "tsc -p functions",
+    "deploy:functions": "firebase deploy --only functions"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.3.3",
     "core-js": "^2.4.1",
+    "firebase": "^4.2.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
@@ -44,6 +47,6 @@
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.2.0"
+    "typescript": "2.4"
   }
 }
