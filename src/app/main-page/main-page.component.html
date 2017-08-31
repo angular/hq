@@ -1,8 +1,8 @@
 <div class="widgets container" fxLayout="row" fxLayoutAlign="center" fxLayoutWrap="wrap">
-  <div class="widget" fxFlex="33.33%" fxFlex.lg="25%" (click)="temp_goToDetailPage()">
+  <div *ngFor="let card of cards" class="widget" fxFlex="33.33%" fxFlex.lg="25%" (click)="temp_goToDetailPage()">
     <app-dummy-travis-widget></app-dummy-travis-widget>
   </div>
-  <div class="widget is-failing" fxFlex="33.33%" fxFlex.lg="25%" (click)="temp_goToDetailPage()">
+  <!-- <div class="widget is-failing" fxFlex="33.33%" fxFlex.lg="25%" (click)="temp_goToDetailPage()">
     <app-dummy-circle-ci-widget></app-dummy-circle-ci-widget>
   </div>
   <div class="widget" fxFlex="33.33%" fxFlex.lg="25%" (click)="temp_goToDetailPage()">
@@ -28,5 +28,5 @@
   <div class="widget" fxFlex="33.33%" fxFlex.lg="25%" (click)="temp_goToDetailPage()">
   </div>
   <div class="widget" fxFlex="33.33%" fxFlex.lg="25%" (click)="temp_goToDetailPage()">
-  </div>
+  </div> -->
 </div>

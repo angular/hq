@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
-  constructor(private router: Router) {
+	cards = [{id: 1}, {id: 2}]
+	constructor(private router: Router) {
 
   }
 

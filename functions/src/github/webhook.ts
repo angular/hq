@@ -4,8 +4,12 @@
 import * as functions from 'firebase-functions'
 import * as firebase from 'firebase'
 import * as admin from 'firebase-admin'
+import * as PubSub from '@google-cloud/pubsub'
+// Instantiates a client
 
 admin.initializeApp(functions.config().firebase);
+const pubsub = PubSub();
+const topic = pubsub.topic('github-events');
 
 function parseRequest(request:functions.Request){
   const action = request.body;
@@ -21,10 +25,12 @@ function handleGithubRequest(request:functions.Request, response:functions.Respo
 		return;
 	}
 
-	const ref = admin.database().ref('/_github_events');
-	const queueAction = ref.push(request.body);
+	const githubAction = {
+		type: request.header('X-GitHub-Event'),
+		payload: request.body
+	}
 
-	Promise.resolve(queueAction)
+	topic.publish(githubAction)
 	  .then((key) => {
 		  response.sendStatus(203);
 	  })

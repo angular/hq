@@ -37,5 +37,5 @@ export const enum GitHubWebhookEventType {
 }
 
 export interface GithubWebhookEvent {
-	action: GitHubWebhookEventType
+	type: GitHubWebhookEventType
 }
