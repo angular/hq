@@ -1,0 +1,26 @@
+<header class="skinny-area">
+  <div class="container">
+    <div class="logo-area" (click)="toggleExpand()">
+      <img class="logo" src="/assets/angular-logo.png">
+      <h2 class="title">{{ activeArea }}</h2>
+    </div>
+    <ol class="status-list">
+      <li><a href="https://travis-ci.org/" target="_blank">Travis <app-status status="passing"></app-status></a></li>
+      <li><a href="https://circleci.com/gh/angular/angular/" target="_blank">Circle <app-status status="failing"></app-status></a></li>
+    </ol>
+  </div>
+</header>
+
+<div class="expanded-area" *ngIf="expanded">
+  <div class="inner">
+    <div class="search-box">
+    <input type="text" placeholder="Filter Projects" [(ngModel)]="filterCriteria" (keydown)="searchKeyDown($event)">
+    </div>
+
+    <div class="selection-container">
+      <div *ngFor="let option of (options | project:filterCriteria)" (click)="select(option)" class="list-item">
+        <h2>{{ option.title }}</h2>
+      </div>
+    </div>
+  </div>
+</div>

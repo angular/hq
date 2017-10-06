@@ -1,0 +1,20 @@
+:host {
+  width:15px;
+  height:15px;
+  border-radius:15px;
+  vertical-align: top;
+  display:inline-block;
+  background:rgba(0,0,0,0.5);
+
+  &.is-passing {
+    background:green;
+  }
+
+  &.is-failing {
+    background:red;
+  }
+
+  &.is-pending {
+    background:orange;
+  }
+}

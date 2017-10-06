@@ -1,0 +1,24 @@
+@import "./normalize";
+@import "./design";
+
+$fa-font-path: "../../assets/fa/fonts" !default;
+@import "../../assets/fa/scss/font-awesome";
+
+.ok {
+  background:url(/assets/check.png) no-repeat center center;
+  display:inline-block;
+  width:80px;
+  height:80px;
+  background-color:green;
+  border-radius:80px;
+}
+
+.not-ok {
+  background:url(/assets/error.png) no-repeat center center;
+  display:inline-block;
+  width:80px;
+  height:80px;
+  background-color:maroon;
+  border-radius:80px;
+}
+

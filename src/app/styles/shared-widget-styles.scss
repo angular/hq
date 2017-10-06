@@ -1,0 +1,83 @@
+:host {
+  padding:1em;
+  text-align:center;
+  display:block;
+  height:100%;
+  position:relative;
+  cursor: pointer;
+}
+
+header {
+  font-family: "Droid Sans Mono";
+  margin-bottom:1rem;
+  font-size:1.8rem;
+}
+
+.label {
+  font-size:3rem;
+  margin-bottom:1rem;
+}
+
+footer {
+  text-transform:uppercase;
+  font-size:0.8rem;
+}
+
+.count {
+  font-size:5rem;
+  &.small {
+    font-size:2.5rem;
+  }
+
+  sub {
+    display:block;
+    font-size:1rem;
+  }
+}
+
+app-status {
+  position:absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  height:10px;
+  width:auto;
+  border-radius:0;
+  transition:300ms ease-out;
+}
+
+:host:not(:hover) app-status,
+:host:not(:hover) .ok,
+:host:not(:hover) .not-ok {
+  opacity:0.3;
+}
+
+.circle {
+  position:relative;
+  margin:0 auto;
+  vertical-align:middle;
+  line-height:150px;
+
+  &, &:before, &:after {
+    width:150px;
+    height:150px;
+  }
+
+  &:before, &:after {
+    position:absolute;
+    content:"";
+    top:0;
+    left:0;
+    border-radius:100%;
+  }
+
+  &:before {
+    border:10px solid white;
+  }
+
+  &:after {
+    border:10px solid green;
+    border-left-color:transparent;
+    transform:rotate(45deg);
+  }
+}

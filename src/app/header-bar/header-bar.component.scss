@@ -1,0 +1,99 @@
+@import "../styles/colors";
+@import "../styles/margins";
+
+:host {
+  display:block;
+  position:relative;
+  background:$color_alt2;
+}
+
+.skinny-area {
+  height:10vh;
+  position:relative;
+}
+
+.logo-area {
+  padding:1rem;
+  cursor: pointer;
+  img {
+    height:50px;
+  }
+  .title, img {
+    display:inline-block;
+    vertical-align: middle;
+  }
+  .title {
+    font-size:1.5rem;
+    cursor:pointer;
+  }
+}
+
+.status-list {
+  position:absolute;
+  bottom:0;
+  right:1rem;
+  top:50%;
+  transform:translateY(-50%);
+  display:table;
+  background:rgba(0,0,0,0.1);
+  padding:1rem;
+  border-radius:3px;
+
+  &, li {
+    list-style:none;
+    margin:0;
+  }
+
+  li {
+    padding:0;
+    display:inline-block;
+  }
+
+  li + li {
+    margin-left:1em!important;
+  }
+
+  li a {
+    &, & > * {
+      display:inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+.expand-actions {
+  position:absolute;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  background:red;
+  transition:0.3s ease-out;
+}
+
+:host:not(:hover) .expand-actions {
+  transform: translateY(-100%) translateX(-50%);
+}
+
+.expanded-area .inner {
+  padding:1rem 1rem 2rem 4rem;
+}
+
+.search-box {
+  margin-bottom:1rem;
+}
+
+.search-box input {
+  padding:0.8rem;
+  background:white;
+  width:80%;
+
+  &:focus {
+    outline:5px solid $color_primary;
+  }
+}
+
+.list-item:hover {
+  color:$color_text_hover;
+  cursor:pointer;
+}
